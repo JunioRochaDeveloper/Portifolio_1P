@@ -1,0 +1,248 @@
+/* 
+  Projeto: Landing Page Pessoal
+  Desenvolvedor: Junior Rocha Web developer
+  Data: 2025
+  Direitos: Todos os direitos reservados
+*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: "Agdasima", sans-serif;
+    min-height: 100vh;
+
+}
+
+/** HEADER **/
+
+header {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+
+}
+
+header h1 {
+
+    margin-top: 15px;
+    font-size: 45px;
+    text-align: center;
+
+}
+
+header p {
+
+    margin-left: 65px;
+
+}
+
+.jr-txt {
+
+    color: #0567a8;
+
+}
+
+
+
+/** LOGO **/
+
+.logo img {
+
+    width: 400px;
+    height: 150px;
+
+}
+/** SECTION **/
+
+section { 
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-bottom: 50px;
+
+}
+
+.apresentacao{
+
+    width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.txt-apresentacao {
+
+    max-width: 480px;
+
+}
+
+.txt-apresentacao p {
+
+    font-size: 15px;
+
+}
+
+.nome-apresentacao {
+
+    font-size:30px;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+.btn-apresentacao {
+
+     width: 100%;
+
+}
+
+.btn-apresentacao ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 20px;
+
+}
+
+/** BUTAO APRESENTACAO **/
+
+.buttom {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #474747;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.1s ease, transform 0.3s ease;
+}
+
+.buttom:hover {
+    color: #fff;
+    transform: scale(1);
+}
+
+/* Cria o efeito de “preenchimento” */
+.buttom::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(45deg, #3b82f6, #2563eb, #06b6d4);
+    border-radius: 50%;
+    z-index: 0;
+    transition: width 0.6s ease, height 0.6s ease, top 0.6s ease, left 0.6s ease;
+}
+
+.buttom:hover::before {
+    width: 300%;
+    height: 500%;
+    top: -100%;
+    left: -100%;
+}
+
+/* Mantém o texto acima do efeito */
+.buttom span.ripple {
+    position: relative;
+    z-index: 1;
+}
+
+/** EFEITO NA IMAGEM  **/
+
+.img-logo {
+
+    border-radius: 600px;
+    width: 300px;
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    transition: transform  0.3s ease;
+
+}
+
+.img-logo:hover {
+
+    transform: scale(0.9);
+
+}
+
+/** RESPONSIVO **/
+
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+ .logo img {
+
+        width: 650px;
+    }
+
+    .img-logo {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .txt-apresentacao {
+        max-width: 90%;
+    }
+
+    .nome-apresentacao {
+        font-size: 50px;
+    }
+
+    .txt-apresentacao p {
+        font-size: 25px;
+    }
+}
+
+/* === RESPONSIVO PARA CELULAR PEQUENO (até 480px) === */
+@media (max-width: 480px) {
+    .apresentacao {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .logo img {
+
+        width: 250px;
+    }
+
+    .img-logo {
+        width: 200px;
+    }
+
+    .nome-apresentacao {
+        font-size: 20px;
+    }
+
+    .txt-apresentacao p {
+        font-size: 20px;
+    }
+    .btn-apresentacao ul{
+
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
